@@ -32,7 +32,7 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <Card className="hover:shadow-lg transition-shadow">
+    <Card className="bg-white/70 backdrop-blur-md border-white/20 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 rounded-2xl">
       <CardHeader className="pb-3">
         <div className="flex gap-4">
           {product.image_url && (
@@ -50,7 +50,7 @@ export default function ProductCard({ product }) {
             </h3>
 
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-orange-500">
+              <span className="text-3xl font-bold text-indigo-600">
                 {product.currency} {product.current_price}
               </span>
               <Badge variant="secondary" className="gap-1">

@@ -1,16 +1,19 @@
+import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata = {
-  title: "Price Tracker - Never Miss a Price Drop",
+  title: "Track-Kar - Never Miss a Price Drop",
   description:
-    "Track product prices across e-commerce sites and get alerts on price drops",
+    "Track product prices across e-commerce sites and get alerts on price drops with Track-Kar.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
 
         <Toaster richColors />

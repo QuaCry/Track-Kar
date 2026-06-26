@@ -19,7 +19,7 @@ export default async function Home() {
       icon: Rabbit,
       title: "Lightning Fast",
       description:
-        "Deal Drop extracts prices in seconds, handling JavaScript and dynamic content",
+        "Track-Kar extracts prices in seconds, handling JavaScript and dynamic content with ease.",
     },
     {
       icon: Shield,
@@ -35,18 +35,14 @@ export default async function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-linear-to-br from-orange-50 via-white to-orange-50">
+    <main className="min-h-screen bg-slate-50 selection:bg-indigo-100 selection:text-indigo-900">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-10">
+      <header className="bg-white/70 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <Image
-              src="/deal-drop-logo.png"
-              alt="Deal Drop Logo"
-              width={600}
-              height={200}
-              className="h-10 w-auto"
-            />
+            <div className="text-2xl font-black bg-clip-text text-transparent bg-linear-to-r from-indigo-600 to-purple-600 tracking-tighter">
+              Track-Kar
+            </div>
           </div>
 
           <AuthButton user={user} />
@@ -56,15 +52,13 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-6 py-2 rounded-full text-sm font-medium mb-6">
-            Made with ❤️ by Roadside Coder
-          </div>
 
-          <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-            Never Miss a Price Drop
+
+          <h2 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tighter">
+            Never Miss a <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600">Price Drop</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Track prices from any e-commerce site. Get instant alerts when
+          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Track prices from any e-commerce site with Track-Kar. Get instant alerts when
             prices drop. Save money effortlessly.
           </p>
 
@@ -76,10 +70,10 @@ export default async function Home() {
               {FEATURES.map(({ icon: Icon, title, description }) => (
                 <div
                   key={title}
-                  className="bg-white p-6 rounded-xl border border-gray-200"
+                  className="bg-white/70 backdrop-blur-md p-6 rounded-2xl border border-white/20 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                    <Icon className="w-6 h-6 text-orange-500" />
+                  <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-5 mx-auto ring-4 ring-indigo-50">
+                    <Icon className="w-6 h-6 text-indigo-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
                   <p className="text-sm text-gray-600">{description}</p>

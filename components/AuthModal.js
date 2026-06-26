@@ -26,11 +26,11 @@ export default function AuthModal({ isOpen, onClose }) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-white/90 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl">
         <DialogHeader>
-          <DialogTitle>Sign in to continue</DialogTitle>
-          <DialogDescription>
-            Track product prices and get alerts on price drops
+          <DialogTitle className="text-2xl font-bold tracking-tight text-slate-900">Sign in to continue</DialogTitle>
+          <DialogDescription className="text-slate-600">
+            Track product prices and get alerts on price drops with Track-Kar
           </DialogDescription>
         </DialogHeader>
 

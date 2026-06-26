@@ -26,7 +26,7 @@ export default function AuthButton({ user }) {
         onClick={() => setShowAuthModal(true)}
         variant="default"
         size="sm"
-        className="bg-orange-500 hover:bg-orange-600 gap-2"
+        className="bg-indigo-600 hover:bg-indigo-700 text-white shadow-md transition-all gap-2"
       >
         <LogIn className="w-4 h-4" />
         Sign In
