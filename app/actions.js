@@ -30,7 +30,9 @@ export async function addProduct(formData) {
       return { error: "Could not extract product information from this URL" };
     }
 
-    const newPrice = parseFloat(productData.currentPrice);
+    // Clean the price string to extract only numbers and decimals
+    const priceString = String(productData.currentPrice).replace(/[^0-9.]/g, '');
+    const newPrice = parseFloat(priceString);
     const currency = productData.currencyCode || "USD";
 
     // Check if product exists to determine if it's an update
